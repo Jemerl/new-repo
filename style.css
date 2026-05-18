@@ -456,7 +456,9 @@ section {
   flex-direction: column;
   border-radius: 0;
   box-shadow: none;
-  transition: background 0.3s ease;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 .pillar:hover,
 .course:hover,
@@ -599,6 +601,16 @@ section {
     grid-column: span 1;
     grid-template-columns: 1fr;
   }
+}
+
+/* FIXED: Prevent Dark Cards from turning white on hover */
+.course-featured:hover,
+.tier-featured:hover,
+.tier-acquisition:hover {
+  background: var(--espresso) !important;
+  border-color: var(
+    --terracotta
+  ) !important; /* Elegant subtle glow instead of washing out */
 }
 
 /* ---------- Identity Callout ---------- */
