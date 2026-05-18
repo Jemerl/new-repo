@@ -16,12 +16,14 @@
   <header class="nav">
     <div class="nav-inner">
       <a href="index.html" class="brand"><span class="dot"></span> Rise Ready</a>
+      <button class="nav-toggle" data-nav-toggle aria-controls="nav-links" aria-expanded="false">Menu <span class="bars"></span></button>
       <nav>
-        <ul class="nav-links">
+        <ul class="nav-links" data-nav-links id="nav-links">
           <li><a href="academy.html">Academy</a></li>
           <li><a href="speaking.html">Book Nicole</a></li>
-          <li><a href="#newsletter">Newsletter</a></li>
-          <li><a href="#login" class="nav-cta">Log In</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="aftershock-index.html">The Index</a></li>
+          <li><a href="#newsletter" class="nav-cta">Newsletter</a></li>
         </ul>
       </nav>
     </div>
@@ -168,7 +170,7 @@
           <span class="eyebrow" style="color: var(--coral);">The Aftershock Index</span>
           <h2>The annual report on women's self&#8209;advocacy in corporate America.</h2>
           <p>Rise Ready publishes the only annual research report measuring the gap between workplace discrimination Black and brown women experience and the self-advocacy actions they actually take. Cited by journalists, policymakers, and Fortune 500 DEI leaders.</p>
-          <a href="enterprise.html" class="btn btn-coral">Download Executive Summary</a>
+          <a href="aftershock-index.html" class="btn btn-coral">Read the Aftershock Index</a>
         </div>
         <div class="index-stats">
           <div class="stat">
@@ -202,9 +204,11 @@
           <p>The Rise Ready weekly newsletter delivers one self-advocacy question, one community win, and one piece of data — written for the woman who reads it on the train and uses it by Wednesday.</p>
         </div>
         <div>
-          <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Welcome to Rise Ready';">
-            <input type="email" required placeholder="your@email.com" aria-label="Email address" />
+          <form data-rr-form="newsletter"
+                data-success="Welcome to Rise Ready. Check your inbox for the first edition.">
+            <input type="email" name="email" required placeholder="your@email.com" aria-label="Email address" />
             <button type="submit" class="btn btn-coral">Subscribe</button>
+            <div class="form-status"></div>
           </form>
           <p style="font-size: 0.85rem; margin-top: 14px; color: rgba(255,255,255,0.7);">No spam. Unsubscribe anytime.</p>
         </div>
@@ -225,14 +229,14 @@
           <ul>
             <li><a href="academy.html">The Academy</a></li>
             <li><a href="speaking.html">Book Nicole</a></li>
+            <li><a href="community.html">Community</a></li>
             <li><a href="#newsletter">Newsletter</a></li>
-            <li><a href="#community">Community</a></li>
           </ul>
         </div>
         <div>
           <h4>Resources</h4>
           <ul>
-            <li><a href="#index">Aftershock Index</a></li>
+            <li><a href="aftershock-index.html">Aftershock Index</a></li>
             <li><a href="#press">Press</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -253,5 +257,6 @@
     </div>
   </footer>
 
+  <script src="main.js" defer></script>
 </body>
 </html>

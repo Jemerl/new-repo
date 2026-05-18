@@ -16,12 +16,14 @@
   <header class="nav">
     <div class="nav-inner">
       <a href="index.html" class="brand"><span class="dot"></span> Rise Ready</a>
+      <button class="nav-toggle" data-nav-toggle aria-controls="nav-links" aria-expanded="false">Menu <span class="bars"></span></button>
       <nav>
-        <ul class="nav-links">
+        <ul class="nav-links" data-nav-links id="nav-links">
           <li><a href="academy.html" style="color: var(--azure);">Academy</a></li>
           <li><a href="speaking.html">Book Nicole</a></li>
-          <li><a href="index.html#newsletter">Newsletter</a></li>
-          <li><a href="#login" class="nav-cta">Log In</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="aftershock-index.html">The Index</a></li>
+          <li><a href="index.html#newsletter" class="nav-cta">Newsletter</a></li>
         </ul>
       </nav>
     </div>
@@ -162,14 +164,14 @@
           <ul>
             <li><a href="academy.html">The Academy</a></li>
             <li><a href="speaking.html">Book Nicole</a></li>
+            <li><a href="community.html">Community</a></li>
             <li><a href="index.html#newsletter">Newsletter</a></li>
-            <li><a href="#community">Community</a></li>
           </ul>
         </div>
         <div>
           <h4>Resources</h4>
           <ul>
-            <li><a href="#index">Aftershock Index</a></li>
+            <li><a href="aftershock-index.html">Aftershock Index</a></li>
             <li><a href="#press">Press</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -190,5 +192,6 @@
     </div>
   </footer>
 
+  <script src="main.js" defer></script>
 </body>
 </html>
